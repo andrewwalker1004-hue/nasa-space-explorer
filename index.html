@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NASA Space Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800&family=Overpass+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <span class="nasa-word">NASA</span>
+      <span class="tagline">Space&nbsp;Explorer</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="fact-box" id="fact-box">
+      <h2>Did You Know?</h2>
+      <p id="fact-text">Loading a fact from the cosmos&hellip;</p>
+    </section>
+
+    <section class="controls">
+      <div class="control-group">
+        <label for="start-date">Start Date</label>
+        <input type="date" id="start-date" />
+      </div>
+      <div class="control-group">
+        <label for="end-date">End Date</label>
+        <input type="date" id="end-date" />
+      </div>
+      <button id="fetch-btn">Get Space Images</button>
+    </section>
+
+    <p id="loading-message" class="loading hidden">🚀 Loading space photos&hellip;</p>
+    <p id="error-message" class="error hidden"></p>
+
+    <section id="gallery" class="gallery"></section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close" aria-label="Close">&times;</button>
+      <div id="modal-media"></div>
+      <h2 id="modal-title"></h2>
+      <p id="modal-date" class="modal-date"></p>
+      <p id="modal-explanation"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Data courtesy of NASA's Astronomy Picture of the Day API</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
